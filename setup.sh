@@ -100,7 +100,13 @@ done
 e_success "Bash files successfully symlinked"
 
 
+e_header "Xcode theme"
 
+mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+
+cp Xcode/*.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+
+e_success "Xcode theme installed"
 
 
 e_arrow "To finish this installation, please install Tomorrow Night Eighties theme for Terminal : https://github.com/chriskempson/tomorrow-theme/blob/master/OS%20X%20Terminal/Tomorrow%20Night%20Eighties.terminal"
