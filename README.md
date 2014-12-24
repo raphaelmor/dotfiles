@@ -9,3 +9,4 @@ My dotfiles. work in progress
 - install theme 'Tomorrow night eighties' for terminal, xcode, vim, etc..
 - install .bashrc and .bash_profile
 
+based on https://github.com/mathiasbynens/dotfiles
