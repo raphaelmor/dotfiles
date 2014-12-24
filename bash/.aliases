@@ -1,0 +1,2 @@
+alias ls='ls -FGph'
+alias ll='ls -FGphla'

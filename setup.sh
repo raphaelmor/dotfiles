@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 function e_header()   { echo -e "\n\033[1m$@\033[0m"; }
 function e_success()  { echo -e " \033[1;32m✔\033[0m  $@"; }
@@ -36,7 +36,9 @@ function backup_file()
 {
 	if [[ -f $1 ]]; then
 		e_arrow "Backing up $1 to $1.back"
-		rm $1.bak
+		if [[ -f $1.bak ]]; then
+			rm $1.bak
+		fi
 		mv $1 $1.bak
 	fi
 }
@@ -75,7 +77,7 @@ fi
 
 e_success "Git is installed"
 
-e_header 'Vim files'
+e_header "Vim files"
 
 backup_file ~/.vimrc
 backup_dir ~/.vim
@@ -86,6 +88,20 @@ do
 done
 
 e_success "Vim files successfully symlinked"
+
+e_header "Bash files"
+
+for file in .{aliases,bash_profile,bash_prompt,bashrc}
+do
+	backup_file ~/$file
+	link_file bash $file
+done
+
+e_success "Bash files successfully symlinked"
+
+
+
+
 
 e_arrow "To finish this installation, please install Tomorrow Night Eighties theme for Terminal : https://github.com/chriskempson/tomorrow-theme/blob/master/OS%20X%20Terminal/Tomorrow%20Night%20Eighties.terminal"
 
