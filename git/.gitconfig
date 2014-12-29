@@ -1,0 +1,12 @@
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	st = status 
+[color]
+	ui = true
+[core]
+	editor = vim -c 'startinsert'
+[user]
+	name = Raphaël Mor
+	email = raphael.mor@gmail.com
+[push]
+	default = simple

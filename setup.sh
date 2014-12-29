@@ -99,6 +99,16 @@ done
 
 e_success "Bash files successfully symlinked"
 
+e_header "Git files"
+
+for file in .gitconfig
+do
+	backup_file ~/$file
+	link_file git $file
+done
+
+e_success "Git files successfully symlinked"
+
 
 e_header "Xcode theme"
 
