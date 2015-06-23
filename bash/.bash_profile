@@ -3,6 +3,11 @@ for file in ~/.{bash_prompt,aliases}; do
 done;
 unset file;
 
+
+
+# Add git completion to the bash
+source ~/.git-completion.bash
+
 # Add GHC 7.8.3 to the PATH, via http://ghcformacosx.github.io/
 export GHC_DOT_APP="/Applications/ghc-7.8.3.app"
 

@@ -101,7 +101,7 @@ e_success "Bash files successfully symlinked"
 
 e_header "Git files"
 
-for file in .gitconfig
+for file in .{gitconfig,git-completion.bash}
 do
 	backup_file ~/$file
 	link_file git $file
