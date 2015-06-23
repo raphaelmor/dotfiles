@@ -5,9 +5,11 @@
 [color]
 	ui = true
 [core]
-	editor = vim -c 'startinsert'
+	editor = vim 
 [user]
 	name = Raphaël Mor
 	email = raphael.mor@gmail.com
 [push]
 	default = simple
+[rebase]
+	autosquash = true
