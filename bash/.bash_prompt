@@ -97,7 +97,7 @@ set_prompts() {
 	PS1+="\[${blue}\]\w"
 	PS1+="\$(prompt_git \"${default} on ${green}\")"
 	PS1+="\n"
-	PS1+="\[${default}\]\$ "
+	PS1+="\[${default}\]λ "
 
     PS2="\[${yellow}\]→ \[${default}\]";
 
