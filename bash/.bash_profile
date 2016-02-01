@@ -3,14 +3,11 @@ for file in ~/.{bash_prompt,aliases}; do
 done;
 unset file;
 
-
+# add stack autocompletion
+eval "$(stack --bash-completion-script stack)"
 
 # Add git completion to the bash
 source ~/.git-completion.bash
 
-# Add GHC 7.8.4 to the PATH, via http://ghcformacosx.github.io/
-export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
-if [ -d "$GHC_DOT_APP" ]; then
-    export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
-fi
-
+# add path for global stack tools (ghc-mod hlint for ex)
+export PATH="/Users/raphaelmor/.local/bin:${PATH}"
