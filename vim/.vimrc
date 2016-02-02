@@ -3,6 +3,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
+" CtrlP : Fuzzy open files
+Plug 'ctrlpvim/ctrlp.vim'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -54,3 +57,10 @@ set ai
 set si
 "Wrap lines
 set wrap
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <silent> <Leader>o :CtrlP()<CR>
+let g:ctrlp_custom_ignore = '\v[\/]dist$'
