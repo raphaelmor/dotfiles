@@ -31,6 +31,12 @@ Plug 'eagletmt/ghcmod-vim'
 " Syntastic : Syntax checker
 Plug 'scrooloose/syntastic'
 
+" Togglelist : toggle location list
+Plug 'milkypostman/vim-togglelist'
+
+" Airline : status line
+Plug 'vim-airline/vim-airline'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -103,6 +109,9 @@ let g:ctrlp_custom_ignore = '\v[\/]dist$'
 " <leader>n : Toggle Tree
 map <Leader>n :NERDTreeToggle<CR>
 
+" Close NERDTree when it is the last window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tabular
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -145,12 +154,13 @@ map <silent> tq :GhcModType<CR>
 " te : clear type
 map <silent> te :GhcModTypeClear<CR>
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " <leader>s : toggle syntastic
 map <Leader>s :SyntasticToggleMode<CR>
+
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -160,3 +170,29 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ToggleList
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nmap <script> <silent> <leader>l :call ToggleLocationList()<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Status Line / Airline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set laststatus=2
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+" Integrate syntastic with airline
+let g:airline#extensions#syntastic#enabled = 1
+" Display current git branch
+let g:airline#extensions#branch#enabled = 1
+" User powerline symbols
+let g:airline_powerline_fonts = 1
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
