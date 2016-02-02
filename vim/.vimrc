@@ -9,6 +9,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 " NERDTree : File finder
 Plug 'scrooloose/nerdtree'
 
+" Tabular : Align stuff
+Plug 'godlygeek/tabular'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -73,3 +76,12 @@ let g:ctrlp_custom_ignore = '\v[\/]dist$'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " <leader>n : Toggle Tree
 map <Leader>n :NERDTreeToggle<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tabular
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:haskell_tabular = 1
+vmap a= :Tabularize /=<CR>
+vmap a; :Tabularize /::<CR>
+vmap a- :Tabularize /-><CR>
