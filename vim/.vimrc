@@ -12,6 +12,9 @@ Plug 'scrooloose/nerdtree'
 " Tabular : Align stuff
 Plug 'godlygeek/tabular'
 
+" SuperTab : Tab Completion"
+Plug 'ervandew/supertab'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -38,6 +41,9 @@ set number
 
 " Set leader to space
 let mapleader = "\<Space>"
+
+" Make backspace work over ident/eol/start
+set backspace=indent,eol,start
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Text, tab and indent related
