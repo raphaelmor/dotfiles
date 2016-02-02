@@ -37,6 +37,15 @@ Plug 'milkypostman/vim-togglelist'
 " Airline : status line
 Plug 'vim-airline/vim-airline'
 
+" Airline theme
+Plug 'vim-airline/vim-airline-themes'
+
+" Solarized Theme
+Plug 'altercation/vim-colors-solarized'
+
+" Fugitive : git wrapper
+Plug 'tpope/vim-fugitive'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -196,3 +205,10 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Solarized
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set background=dark
+colorscheme solarized
