@@ -28,6 +28,9 @@ Plug 'Shougo/vimproc.vim' , { 'do': 'make' }
 " GHCMod : Haskell helper
 Plug 'eagletmt/ghcmod-vim'
 
+" Syntastic : Syntax checker
+Plug 'scrooloose/syntastic'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -132,6 +135,7 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GHCMod
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " tw : insert type
 map <silent> tw :GhcModTypeInsert<CR>
 " ts : split case
@@ -140,3 +144,19 @@ map <silent> ts :GhcModSplitFunCase<CR>
 map <silent> tq :GhcModType<CR>
 " te : clear type
 map <silent> te :GhcModTypeClear<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" <leader>s : toggle syntastic
+map <Leader>s :SyntasticToggleMode<CR>
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
