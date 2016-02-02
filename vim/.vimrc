@@ -22,6 +22,9 @@ Plug 'eagletmt/neco-ghc'
 " NeoComplete : better autocomplete"
 Plug 'Shougo/neocomplete.vim'
 
+" VimProc : Async lib
+Plug 'Shougo/vimproc.vim' , { 'do': 'make' }
+
 " Add plugins to &runtimepath
 call plug#end()
 
