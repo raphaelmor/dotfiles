@@ -1,7 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup Vim-Plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 call plug#begin('~/.vim/plugged')
 
 " CtrlP : Fuzzy open files
@@ -140,22 +139,25 @@ vmap a- :Tabularize /-><CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SuperTab
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+augroup filetype_haskell
+  autocmd!
+  autocmd FileType haskell let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+  autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+  autocmd FileType haskell call SuperTabChain(&omnifunc, "<c-p>")
+augroup END
 
-let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
-
-if has("gui_running")
-  imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
-else " no gui
-  if has("unix")
-    inoremap <Nul> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
-  endif
-endif
+"if has("gui_running")
+"  imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+"else " no gui
+"  if has("unix")
+"    inoremap <Nul> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+"  endif
+"endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neco-GHC
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:haskellmode_completion_ghc = 1
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GHCMod
