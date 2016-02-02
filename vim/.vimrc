@@ -6,6 +6,9 @@ call plug#begin('~/.vim/plugged')
 " CtrlP : Fuzzy open files
 Plug 'ctrlpvim/ctrlp.vim'
 
+" NERDTree : File finder
+Plug 'scrooloose/nerdtree'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -61,6 +64,12 @@ set wrap
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" <leader>o : Fuzzy open file
 map <silent> <Leader>o :CtrlP()<CR>
 let g:ctrlp_custom_ignore = '\v[\/]dist$'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" <leader>n : Toggle Tree
+map <Leader>n :NERDTreeToggle<CR>
