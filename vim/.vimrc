@@ -25,6 +25,9 @@ Plug 'Shougo/neocomplete.vim'
 " VimProc : Async lib
 Plug 'Shougo/vimproc.vim' , { 'do': 'make' }
 
+" GHCMod : Haskell helper
+Plug 'eagletmt/ghcmod-vim'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -125,3 +128,15 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:haskellmode_completion_ghc = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" GHCMod
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" tw : insert type
+map <silent> tw :GhcModTypeInsert<CR>
+" ts : split case
+map <silent> ts :GhcModSplitFunCase<CR>
+" tq : show type
+map <silent> tq :GhcModType<CR>
+" te : clear type
+map <silent> te :GhcModTypeClear<CR>
