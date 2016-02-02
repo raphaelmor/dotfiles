@@ -19,6 +19,9 @@ Plug 'ervandew/supertab'
 " Neco-GHC : smart Haskell autocomplete
 Plug 'eagletmt/neco-ghc'
 
+" NeoComplete : better autocomplete"
+Plug 'Shougo/neocomplete.vim'
+
 " Add plugins to &runtimepath
 call plug#end()
 
