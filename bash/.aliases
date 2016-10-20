@@ -1,2 +1,9 @@
 alias ls='ls -FGph'
 alias ll='ls -FGphla'
+alias meteo='curl wttr.in/Paris?m'
+
+alias st='git status'
+alias ff='git pull --ff-only'
+alias prb='git pull --rebase'
+alias fup='git commit --fixup'
+alias amd='git commit --amend'
