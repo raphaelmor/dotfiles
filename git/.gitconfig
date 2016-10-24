@@ -6,6 +6,7 @@
 	fap = fetch --all --prune
   p = pull --ff-only
   prb = pull --rebase
+  div = divergence
 [color]
 	ui = true
 [core]

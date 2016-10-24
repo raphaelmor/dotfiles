@@ -27,9 +27,20 @@ function link_file()
 	ln -s "$PWD/$1/$2" "$HOME/$2"
 	if [ $? -ne 0 ]
 	then
-		e_error "Cannont symlink $2"
+		e_error "Cannot symlink $2"
 		exit 1
 	fi
+}
+
+function link_dir()
+{
+  e_arrow "Symlinking $PWD/$1 to $HOME/$1"
+  ln -s "$PWD/$1" "$HOME/$1"
+  if [ $? -ne 0 ]
+  then
+    e_error "Cannot symlink $1"
+    exit 1
+  fi
 }
 
 function backup_file()
@@ -88,6 +99,13 @@ do
 done
 
 e_success "Vim files successfully symlinked"
+
+e_header "Bin files"
+
+backup_dir ~/bin
+link_dir bin
+
+e_success "Bin dir successfully symlinked"
 
 e_header "Bash files"
 
