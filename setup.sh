@@ -117,6 +117,16 @@ done
 
 e_success "Commmon shell files successfully symlinked"
 
+e_header "Zsh files"
+
+#for file in .zshrc
+#do
+	backup_file ~/.zshrc
+	link_file zsh .zshrc
+#done
+
+e_success "Zsh files successfully symlinked"
+
 e_header "Bash files"
 
 for file in .{bash_profile,bash_prompt,bashrc}
