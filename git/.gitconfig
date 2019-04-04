@@ -1,8 +1,9 @@
 [alias]
+  ff = pull --ff-only
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   fixup = commit --fixup
   amend = commit --amend
-	st = status 
+	st = status
 	fap = fetch --all --prune
   p = pull --ff-only
   prb = pull --rebase
@@ -10,7 +11,7 @@
 [color]
 	ui = true
 [core]
-	editor = vim 
+	editor = vim
 [user]
 	name = Raphaël Mor
 	email = raphael.mor@gmail.com
