@@ -7,3 +7,27 @@ alias ff='git pull --ff-only'
 alias prb='git pull --rebase'
 alias fup='git commit --fixup'
 alias amd='git commit --amend'
+
+# Apple Stuff
+
+function xup() {
+    # You have to keep the following up-to-date. We should read the right train automatically though
+    sh /Volumes/Obelix/install-xcode --osx LatestLoboElk --ios LatestEmet --xcode EdgeSeed9Q54j  --user rmor --nfa-user raphael_mor  --no-prompt
+    # use, e.g., --xcode EverestTrail, if Xcode version required
+}
+
+alias sdkversion='xcrun --show-sdk-build-version -sdk iphoneos.internal'
+alias osxsdkversion='xcrun --show-sdk-build-version -sdk macosx.internal'
+alias sdks='xcodebuild -showsdks'
+alias sdk='xcrun --sdk iphoneos --show-sdk-path'
+
+function whichtag() { # e.g., whichtag UIKit Whitetail 14A133
+    # ls -la  ~rc/Software/Whitetail/Updates/Whitetail14A133/BuildRecords/UIKit
+    # debugging: echo "ls -la  ~rc/Software/${2}/Updates/${2}${3}/BuildRecords/${1}"
+    ls -la  ~rc/Software/${2}/Updates/${2}${3}/BuildRecords/${1} | grep -o -e "\/${1}-.*"
+}
+
+alias pur='~/bin/pur-py/pur.py'
+
+alias mycompressroot="sudo rm -rf ./tmp .DS_Store ; sudo chown -R root . && sudo tar -cvzf ../root.tgz ."
+alias xia_yukon='sudo /Volumes/XIA/xia_restore --category macOS_iOS --type standard-ui-sdk-internal --image Newest --no-confirmation-prompt --erase-entire-container --delete-cached-image --rename-volume Yukon --base-path /Volumes/XIA --cohort macOSJazz_Yukon --no-enable-FileVault --no-open-xcode --container disk2'

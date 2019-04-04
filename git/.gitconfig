@@ -14,7 +14,7 @@
 	editor = vim
 [user]
 	name = Raphaël Mor
-	email = raphael.mor@gmail.com
+	email = rmor@apple.com
 [push]
 	default = simple
 [rebase]
