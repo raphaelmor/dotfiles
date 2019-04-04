@@ -92,7 +92,7 @@ e_header "Vim files"
 
 backup_file ~/.vimrc
 backup_dir ~/.vim
- 
+
 for file in .vim .vimrc
 do
 	link_file vim $file
@@ -107,9 +107,19 @@ link_dir bin
 
 e_success "Bin dir successfully symlinked"
 
+e_header "Commmon shell files"
+
+for file in .{aliases,path}
+do
+	backup_file ~/$file
+	link_file shells $file
+done
+
+e_success "Commmon shell files successfully symlinked"
+
 e_header "Bash files"
 
-for file in .{aliases,bash_profile,bash_prompt,bashrc}
+for file in .{bash_profile,bash_prompt,bashrc}
 do
 	backup_file ~/$file
 	link_file bash $file

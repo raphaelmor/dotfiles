@@ -1,0 +1,2 @@
+export PATH=$PATH:/Users/raphaelmor/.local/bin/
+export PATH="/Users/raphaelmor/homebrew/bin:$PATH"
