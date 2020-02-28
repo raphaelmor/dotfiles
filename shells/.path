@@ -1,2 +1,8 @@
-export PATH=$PATH:/Users/raphaelmor/.local/bin/
-export PATH="/Users/raphaelmor/homebrew/bin:$PATH"
+#export PATH=/Users/raphaelmor/bin
+
+#export PATH=$PATH:/Users/raphaelmor/.local/bin/
+#export PATH="/Users/raphaelmor/homebrew/bin:/Users/raphaelmor/bin:$PATH"
+
+
+export PATH="/Users/raphaelmor/bin/:/Users/raphaelmor/bin/pur-py/:${PATH}"
+export PATH="${PATH}:~/.platformio/penv/bin/"

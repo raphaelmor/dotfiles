@@ -5,3 +5,4 @@ unset file;
 
 # Add git completion to the bash
 source ~/.git-completion.bash
+PATH=~/.xclink/bin:$PATH
