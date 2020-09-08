@@ -8,8 +8,10 @@ alias prb='git pull --rebase'
 alias fup='git commit --fixup'
 alias amd='git commit --amend'
 
-# Apple Stuff
 
+# Apple Stuff
+alias cdm='cd ~/Code/documentmanager/'
+alias cdq='cd ~/Code/quicklookshared'
 function xup() {
     # You have to keep the following up-to-date. We should read the right train automatically though
     sh /Volumes/Obelix/install-xcode --osx LatestLoboElk --ios LatestEmet --xcode EdgeSeed9Q54j  --user rmor --nfa-user raphael_mor  --no-prompt
@@ -24,7 +26,7 @@ alias sdk='xcrun --sdk iphoneos --show-sdk-path'
 function whichtag() { # e.g., whichtag UIKit Whitetail 14A133
     # ls -la  ~rc/Software/Whitetail/Updates/Whitetail14A133/BuildRecords/UIKit
     # debugging: echo "ls -la  ~rc/Software/${2}/Updates/${2}${3}/BuildRecords/${1}"
-    ls -la  ~rc/Software/${2}/Updates/${2}${3}/BuildRecords/${1} | grep -o -e "\/${1}-.*"
+    ls -la  /SWE/Software/${2}/Updates/${2}${3}/BuildRecords/${1} | grep -o -e "\/${1}-.*"
 }
 
 alias pur='~/bin/pur-py/pur.py'
