@@ -15,11 +15,11 @@ option_as_alt = "Both"
 [font]
 normal.family = "MesloLGS Nerd Font"
 
-size = 12
+size = 14
 
 [colors]
-# Colors (Gruvbox dark)
 
+# Colors (Gruvbox dark)
 # Default colors
 [colors.primary]
 # hard contrast background = = '#1d2021'

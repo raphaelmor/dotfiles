@@ -36,9 +36,24 @@ setopt hist_verify            # show command with history expansion to user befo
 setopt inc_append_history     # add commands to HISTFILE in order of execution
 setopt share_history          # share command history data
 
+# completion using arrow keys (based on history)
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+
+
+# -------
+# Aliases
+# -------
 alias ls='eza -G --icons=auto --group-directories-first'
 alias ll='eza -G --icons=auto --group-directories-first --long --git -h --extended'
 alias la='eza -G -a --icons=auto --group-directories-first --long --git -h --extended'
-
+alias cd='z'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+path+=('/Users/raphaelmor/Code/odin/')
+export PATH
+
+# add syntax highlighting to zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+

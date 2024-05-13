@@ -2,12 +2,14 @@
 [user]
 # Please adapt and uncomment the following lines:
 name = Raphaël Mor
-{{- if eq .chezmoi.hostname "aaaa-MacBook-Pro-de-Raphael" }}
-email = raphael.mor@gmail.com 
-{{- else }}
 email = rmor@apple.com
-{{- end }}
 
 [alias]
 st = status
-ff = pull --fast-forward
+ff = pull --ff-only
+[commit]
+	gpgsign = true
+[gpg]
+	format = x509
+[gpg "x509"]
+	program = /usr/local/bin/ac-sign
