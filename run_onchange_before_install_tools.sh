@@ -1,6 +1,8 @@
 #!/bin/bash
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
+tap "homebrew/cask-fonts"
+cask "font-meslo-lg-nerd-font"
 cask "alacritty"
 brew "eza"
 brew "lazygit"
