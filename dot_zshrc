@@ -23,13 +23,6 @@ zinit light zsh-users/zsh-autosuggestions
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-# make sure the cli tools use colors if supported
-export CLICOLOR=1 
-
-# make nvim our default editor
-export VISUAL='nvim'
-export EDITOR='nvim'
-
 # -------
 # HISTORY
 # -------
