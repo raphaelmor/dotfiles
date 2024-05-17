@@ -5,6 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+CONFIG="/Users/raphaelmor/.config/"
+ZINIT_HOME="${CONFIG}/zinit/zinit.git"
+source "${ZINIT_HOME}/zinit.zsh"
+
 # Enable powerlevel 10k
 source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
