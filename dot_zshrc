@@ -5,13 +5,19 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-CONFIG="/Users/raphaelmor/.config/"
-ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/"
+# enable powerlevel10k shell 
+source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
+CONFIG="/Users/raphaelmor/.config/"
+
+# Enable plugin manager for Zsh
+ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/"
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Enable powerlevel 10k
-source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
+#plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+
 
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -53,12 +59,11 @@ alias ls='eza -G --icons=auto --group-directories-first'
 alias ll='eza -G --icons=auto --group-directories-first --long --git -h --extended'
 alias la='eza -G -a --icons=auto --group-directories-first --long --git -h --extended'
 alias cd='z'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 path+=('/Users/raphaelmor/Code/odin/')
 export PATH
 
-# add syntax highlighting to zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
