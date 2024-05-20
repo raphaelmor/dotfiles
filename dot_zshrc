@@ -19,9 +19,9 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
-
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # -------
 # HISTORY
@@ -31,12 +31,19 @@ export HISTFILE=~/.config/zsh/.zsh_history
 # set history size (almost unlimited)
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+export HISTDUP=erase
 
 ## History command configuration
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_ignore_dups       # ignore duplicated commands history list
+setopt hist_ignore_all_dups       # ignore duplicated commands history list
+setopt hist_save_no_dups
+setopt hist_find_no_dups
 setopt extended_history       # record timestamp of command in HISTFILE
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
-setopt hist_ignore_dups       # ignore duplicated commands history list
-setopt hist_ignore_space      # ignore commands that start with space
 setopt hist_verify            # show command with history expansion to user before running it
 setopt inc_append_history     # add commands to HISTFILE in order of execution
 setopt share_history          # share command history data
@@ -59,5 +66,4 @@ alias cd='z'
 
 path+=('/Users/raphaelmor/Code/odin/')
 export PATH
-
 
