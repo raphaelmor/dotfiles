@@ -15,7 +15,7 @@ source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
 eval "$(fzf --zsh)"
 
 # Enable plugin manager for Zsh
-ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/"
+ZINIT_HOME=".config/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 zinit cdreplay -q

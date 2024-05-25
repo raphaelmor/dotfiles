@@ -22,7 +22,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/p
 #make alacritty look better
 defaults write org.alacritty AppleFontSmoothing -int 0
 
-mv ~/.local/share/zinit{,.bak}
+mv ~/.config/zinit{,.bak}
 git clone https://github.com/zdharma-continuum/zinit.git ~/.config/zinit/zinit.git
 
 # Setup LazyVim
