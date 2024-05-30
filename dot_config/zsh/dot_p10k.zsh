@@ -512,7 +512,7 @@
   ##########################[ status: exit code of the last command ]###########################
   # Enable OK_PIPE, ERROR_PIPE and ERROR_SIGNAL status states to allow us to enable, disable and
   # style them independently from the regular OK and ERROR state.
-  typeset -g POWERLEVEL9K_STATUS_EXTENDED_STATES=true
+  typeset -g POWERLEVEL9K_STATUS_EXTENDED_STATES=false
 
   # Status on success. No content, just an icon. No need to show it if prompt_char is enabled as
   # it will signify success by turning green.
@@ -530,7 +530,7 @@
 
   # Status when it's just an error code (e.g., '1'). No need to show it if prompt_char is enabled as
   # it will signify error by turning red.
-  typeset -g POWERLEVEL9K_STATUS_ERROR=false
+  typeset -g POWERLEVEL9K_STATUS_ERROR=true
   typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION='✘'
   typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=3
   typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=1
