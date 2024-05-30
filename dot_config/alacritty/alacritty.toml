@@ -17,6 +17,12 @@ normal.family = "MesloLGS Nerd Font"
 
 size = 14
 
+[keyboard]
+bindings = [
+  { key = "Space", mods = "Control", chars = "\u0000"},
+  { key = "Escape", chars = "\u001B"}
+]
+
 [colors]
 
 # Colors (Gruvbox dark)
