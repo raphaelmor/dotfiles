@@ -11,12 +11,21 @@ fi
 
 autoload -U compinit && compinit
 
+path+=('/Users/raphaelmor/Code/odin/')
+path+=('/Users/raphaelmor/.config/tmux/plugins/tmuxifier/bin')
+export PATH
+
+EDITOR='nvim'
+export EDITOR
 
 # enable powerlevel10k shell 
 source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
 # fzf integration
 eval "$(fzf --zsh)"
+
+# tmuxifier integration
+eval "$(tmuxifier init -)"
 
 # Enable plugin manager for Zsh
 ZINIT_HOME="/Users/raphaelmor/.config/zinit/zinit.git"
@@ -82,9 +91,6 @@ alias cd='z'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
-path+=('/Users/raphaelmor/Code/odin/')
-path+=('$HOME/.tmuxifier/bin')
-export PATH
 
 # Uncomment to profile startup time
 # zprof
