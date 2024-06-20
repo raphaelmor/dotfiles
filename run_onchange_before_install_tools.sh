@@ -41,3 +41,6 @@ rm -rf ~/.config/nvim/.git
 # Setup TPM (Tmux plugin manager)
 mv ~/.config/tmux/tpm{,.bak}
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/tpm
+
+mv ~/.tmuxifier{,.bak}
+git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
