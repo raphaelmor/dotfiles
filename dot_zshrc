@@ -83,6 +83,7 @@ alias cd='z'
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 path+=('/Users/raphaelmor/Code/odin/')
+path+=('$HOME/.tmuxifier/bin')
 export PATH
 
 # Uncomment to profile startup time
