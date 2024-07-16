@@ -14,6 +14,7 @@ brew "neofetch"
 brew "zsh-syntax-highlighting"
 brew "zoxide"
 brew "tmux"
+brew 'tmuxinator'
 EOF
 
 #install powerlevel10k
