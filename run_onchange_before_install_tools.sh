@@ -15,6 +15,7 @@ brew "zsh-syntax-highlighting"
 brew "zoxide"
 brew "tmux"
 brew 'tmuxinator'
+cask "nikitabobko/tap/aerospace"
 EOF
 
 #install powerlevel10k
