@@ -88,9 +88,11 @@ alias la='eza -G -a --icons=auto --group-directories-first --long --git -h --ext
 alias cd='z'
 
 pick_ssh_host() {
-   cat ~/.ssh/config.d/config_iosmenu | grep "Match host" | awk '{print $3}' | fzf
+   cat ~/.ssh/config.d/config_iosmenu | grep "Match host" | awk '{print $3}' | fzf --tmux center,10% --layout reverse --border
 }
 alias ssr='ssh root@$(pick_ssh_host)'
+alias ssm='ssh mobile@$(pick_ssh_host)'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
