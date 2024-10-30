@@ -15,6 +15,9 @@ path+=('/Users/raphaelmor/.config/tmux/plugins/tmuxifier/bin')
 path+=('/Users/raphaelmor/bin')
 export PATH
 
+# morhetz/gruvbox
+export FZF_DEFAULT_OPTS='--color=spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934'
+
 EDITOR='nvim'
 export EDITOR
 
@@ -40,6 +43,7 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit snippet OMZP::git
 
+
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
@@ -47,8 +51,11 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:complete:z:*' fzf-preview 'eza -1 --color=always $realpath'
 # switch group using `<` and `>`
 zstyle ':fzf-tab:*' switch-group '<' '>'
+# zstyle ':fzf-tab:*' fzf-command ftb-tmux-popups
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
+
+# fzf tab preview sources
 
 # -------
 # HISTORY
