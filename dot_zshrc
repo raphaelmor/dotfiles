@@ -95,8 +95,28 @@ alias ll='eza -G --icons=auto --group-directories-first --long --git -h --extend
 alias la='eza -G -a --icons=auto --group-directories-first --long --git -h --extended'
 alias cd='z'
 
+# TODO: make sure we exit when we press escape in fzf
 pick_ssh_host() {
-   cat ~/.ssh/config.d/config_iosmenu | grep "Match host" | awk '{print $3}' | fzf --tmux center,10% --layout reverse --border
+  declare -A DEVICES
+  local NAMES=()
+
+  local state="connected"
+
+  devicectl list devices --hide-headers --filter "State BEGINSWITH '$state'" | grep "$state" | while read -r device; do
+    local INFO=$(echo $device | awk -F "[ \t\n]{2,}+" '{ printf "%s;%s;%s", $1, $2, $5 }')
+    local DEVICE_NAME=$(echo $INFO | awk -F ";" '{ print $1 }')
+    local DEVICE_DOMAIN=$(echo $INFO | awk -F ";" '{ print $2 }')
+    local DEVICE_MODEL=$(echo $INFO | awk -F ";" '{ print $3 }')
+    DEVICES+=([$DEVICE_NAME]=$DEVICE_DOMAIN)
+    NAMES+=("$(echo "$DEVICE_NAME")")
+  done
+
+  if [[ "${#NAMES}" -eq 1 ]]; then
+    selected_device="$NAMES[1]"
+  else
+    selected_device=$(print -l -- "$NAMES[@]" | fzf --tmux center,20%,20% --reverse)
+  fi
+  echo "${DEVICES[$selected_device]}"
 }
 alias ssr='ssh root@$(pick_ssh_host)'
 alias ssm='ssh mobile@$(pick_ssh_host)'
