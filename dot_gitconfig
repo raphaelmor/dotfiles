@@ -7,6 +7,9 @@ email = rmor@apple.com
 [alias]
 st = status
 ff = pull --ff-only
+lucky = checkout release/23.A-Luckier
+amend = commit --amend
+
 [commit]
 	gpgsign = true
 [gpg]

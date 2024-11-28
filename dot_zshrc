@@ -94,6 +94,7 @@ alias ls='eza -G --icons=auto --group-directories-first'
 alias ll='eza -G --icons=auto --group-directories-first --long --git -h --extended'
 alias la='eza -G -a --icons=auto --group-directories-first --long --git -h --extended'
 alias cd='z'
+alias tmp='tmuxinator start Preview'
 
 # TODO: make sure we exit when we press escape in fzf
 pick_ssh_host() {
