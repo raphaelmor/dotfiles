@@ -1,0 +1,60 @@
+### Fonts ##################################################
+
+font-family = "Monaspace Neon Var"
+font-family = "MesloLGS Nerd Font"
+
+# calt: "texture healing"
+font-feature = "calt"
+# ss01: != and ===
+font-feature = "ss01"
+# ss02: <= and >=
+font-feature = "ss02"
+# ss03: -> and ~>
+font-feature = "ss03"
+# ss04: <> and </>
+font-feature = "ss04"
+# liga: //, ..., ||
+font-feature = "liga"
+
+font-size = 14
+
+### Theme ##################################################
+theme = light:gruvbox-material-hard-light,dark:gruvbox-material-hard-dark
+
+# Fix for autocomplete text in shell
+#palette = 8=#666666 
+
+#selection-invert-fg-bg = 1
+#cursor-invert-fg-bg = 1
+
+background-opacity = 0.95
+background-blur-radius = 20
+
+window-padding-x = 10
+window-padding-y = 10
+
+window-padding-balance = true
+window-padding-color = extend
+
+window-colorspace = display-p3
+
+#custom-shader = /Users/raphaelmor/.config/ghostty/shaders/glitchy.glsl
+#custom-shader-animation = true
+
+mouse-hide-while-typing = true
+
+### Other ##################################################
+
+window-save-state = always
+shell-integration-features = no-cursor
+keybind = global:super+ctrl+alt+shift+t=toggle_quick_terminal
+
+macos-titlebar-style = hidden
+macos-titlebar-proxy-icon = hidden
+macos-option-as-alt = true 
+
+macos-icon = custom-style
+macos-icon-frame = beige
+macos-icon-ghost-color = #e78a4e
+macos-icon-screen-color = #282828 
+
