@@ -11,7 +11,7 @@ padding.y = 10
 
 decorations = "Buttonless"
 
-opacity = 0.75
+opacity = 0.72
 blur = true
 
 option_as_alt = "Both"
@@ -19,18 +19,15 @@ option_as_alt = "Both"
 [font]
 normal.family = "MesloLGS Nerd Font"
 
-size = 14
+size = 16
 
 [keyboard]
 bindings = [
-  { key = "Space", mods = "Control", chars = "\u0000"},
-  { key = "Escape", chars = "\u001B"},
+  { key = "Space", mods = "Control", chars = "\u0000" },
+  { key = "Escape", chars = "\u001B" },
 ]
 
 [general]
-import = [
-    "~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"
-]
+import = ["~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"]
 
 [terminal]
-
