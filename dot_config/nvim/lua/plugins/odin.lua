@@ -14,6 +14,10 @@ return {
     },
   },
   {
+    "nvim-neotest/neotest",
+    opts = { adapters = { "neotest-odin" } },
+  },
+  {
     "mfussenegger/nvim-dap",
     config = function()
       local dap = require("dap")

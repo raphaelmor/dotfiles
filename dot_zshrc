@@ -1,13 +1,6 @@
 # Uncomment for profiling startup time
 # zmodload zsh/zprof
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 autoload -U compinit && compinit
 
 path+=('/Users/raphaelmor/Code/odin/')
@@ -16,14 +9,11 @@ path+=('/Users/raphaelmor/bin')
 export PATH
 
 # morhetz/gruvbox
-export FZF_DEFAULT_OPTS='--color=spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934'
+export FZF_DEFAULT_OPTS='--color=spinner:#ea6962,hl:#928374,fg:#ebdbb2,header:#928374,info:#a9b665,pointer:#ea6962,marker:#ea6962,fg+:#ebdbb2,prompt:#ea6962,hl+:#ea6962'
 export BAT_THEME="gruvbox-dark"
 
 EDITOR='nvim'
 export EDITOR
-
-# enable powerlevel10k shell 
-source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
 # fzf integration
 eval "$(fzf --zsh)"
@@ -86,6 +76,7 @@ setopt share_history          # share command history data
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
+bindkey -v
 
 # -------
 # Aliases
@@ -122,8 +113,6 @@ pick_ssh_host() {
 alias ssr='ssh root@$(pick_ssh_host)'
 alias ssm='ssh mobile@$(pick_ssh_host)'
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 # Uncomment to profile startup time
 # zprof

@@ -1,6 +1,6 @@
 ### Fonts ##################################################
 
-font-family = "Monaspace Neon Var"
+#font-family = "Monaspace Neon"
 font-family = "MesloLGS Nerd Font"
 
 # calt: "texture healing"
@@ -16,22 +16,19 @@ font-feature = "ss04"
 # liga: //, ..., ||
 font-feature = "liga"
 
-font-size = 14
+font-size = 16
+font-thicken = false
 
 ### Theme ##################################################
 theme = light:gruvbox-material-hard-light,dark:gruvbox-material-hard-dark
 
-# Fix for autocomplete text in shell
-#palette = 8=#666666 
+background-opacity = 0.8
+#background-blur-radius = 20
 
-#selection-invert-fg-bg = 1
-#cursor-invert-fg-bg = 1
+window-padding-x = 5
+window-padding-y = 5
 
-background-opacity = 0.95
-background-blur-radius = 20
-
-window-padding-x = 10
-window-padding-y = 10
+adjust-cursor-thickness = 4
 
 window-padding-balance = true
 window-padding-color = extend
@@ -44,6 +41,9 @@ window-colorspace = display-p3
 mouse-hide-while-typing = true
 
 ### Other ##################################################
+## Shell Integration
+shell-integration = none
+#shell-integration-features = cursor,sudo,title
 
 window-save-state = always
 shell-integration-features = no-cursor
