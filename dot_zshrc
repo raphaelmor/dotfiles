@@ -113,6 +113,7 @@ pick_ssh_host() {
 alias ssr='ssh root@$(pick_ssh_host)'
 alias ssm='ssh mobile@$(pick_ssh_host)'
 
+eval "$(starship init zsh)"
 
 # Uncomment to profile startup time
 # zprof

@@ -4,6 +4,7 @@ brew bundle --no-lock --file=/dev/stdin <<EOF
 tap "homebrew/cask-fonts"
 cask "font-meslo-lg-nerd-font"
 cask "alacritty"
+brew "ghostty"
 brew "eza"
 brew "lazygit"
 brew "ripgrep"
@@ -17,10 +18,6 @@ brew "tmux"
 brew 'tmuxinator'
 cask "nikitabobko/tap/aerospace"
 EOF
-
-#install powerlevel10k
-mv ~/.config/zsh/powerlevel10k{,.bak}
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/powerlevel10k
 
 #make alacritty look better
 defaults write org.alacritty AppleFontSmoothing -int 0
