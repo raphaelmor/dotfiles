@@ -1,8 +1,11 @@
-### Fonts ##################################################
+ ### Fonts ##################################################
 
-#font-family = "Monaspace Neon"
-font-family = "MesloLGS Nerd Font"
-
+# font-family = "Hack Nerd Font Mono"
+# font-family = "FiraCode Nerd Font Mono"
+# font-family = "RobotoMono Nerd Font"
+# font-family = "NotoSansM Nerd Font Mono"
+font-family = "MonaspiceNe Nerd Font"
+#
 # calt: "texture healing"
 font-feature = "calt"
 # ss01: != and ===
@@ -11,45 +14,61 @@ font-feature = "ss01"
 font-feature = "ss02"
 # ss03: -> and ~>
 font-feature = "ss03"
-# ss04: <> and </>
+# # ss04: <> and </>
 font-feature = "ss04"
-# liga: //, ..., ||
+# # liga: //, ..., ||
 font-feature = "liga"
 
-font-size = 16
-font-thicken = false
+# font-variation = wght=450
+#
+# font-variation-bold = wght=720
+#
+# font-variation-italic = wght=350
+# font-variation-italic = slnt=-11
+#
+# font-variation-bold-italic = wght=800
+# font-variation-bold-italic = slnt=-11
+
+font-size = 14
+font-thicken = true
+adjust-cell-height = 4
+adjust-font-baseline = -1
+
+#font-codepoint-map = U+e000-U+f8ff=MesloLGSDZ Nerd Font Mono
 
 ### Theme ##################################################
-theme = light:gruvbox-material-hard-light,dark:gruvbox-material-hard-dark
-
-background-opacity = 0.8
-#background-blur-radius = 20
-
+# #theme = light:gruvbox-material-hard-light,dark:gruvbox-material-hard-dark
+theme = gruvbox-material-hard-dark
+split-divider-color = #d8a657
+background-opacity = 1 
+# background-opacity = 0.75
+background-blur-radius = 30
+#
 window-padding-x = 5
 window-padding-y = 5
-
+#
 adjust-cursor-thickness = 4
-
+#
 window-padding-balance = true
 window-padding-color = extend
-
+#
 window-colorspace = display-p3
+#
 
-#custom-shader = /Users/raphaelmor/.config/ghostty/shaders/glitchy.glsl
-#custom-shader-animation = true
-
-mouse-hide-while-typing = true
-
+# custom-shader = "shaders/bloom-ramo.glsl"
 ### Other ##################################################
 ## Shell Integration
 shell-integration = none
-#shell-integration-features = cursor,sudo,title
+shell-integration-features = no-cursor, no-sudo, no-title
 
+mouse-hide-while-typing = true
+#
 window-save-state = always
-shell-integration-features = no-cursor
-keybind = global:super+ctrl+alt+shift+t=toggle_quick_terminal
-
-macos-titlebar-style = hidden
+# keybind = global:super+ctrl+alt+shift+t=toggle_quick_terminal
+#
+link-url=true
+#
+macos-titlebar-style = transparent
 macos-titlebar-proxy-icon = hidden
 macos-option-as-alt = true 
 
@@ -57,4 +76,6 @@ macos-icon = custom-style
 macos-icon-frame = beige
 macos-icon-ghost-color = #e78a4e
 macos-icon-screen-color = #282828 
-
+desktop-notifications = true
+macos-secure-input-indication = true
+#
